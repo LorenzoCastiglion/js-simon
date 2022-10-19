@@ -11,8 +11,6 @@ const memoryHtml = document.getElementById('memory');
 
 const btnGen = document.getElementById('genera')
 
-const btnSend = document.getElementById('send');
-
 let num = [];
 
 let numNum = 5;
@@ -33,12 +31,46 @@ function genNum () {
     
     // printo l'array numrndm nel DOM
     memoryHtml.innerHTML = num;
-
+    console.log(num);
     // setto una arrow funct che mi cancella il print array num nel DOM
 setTimeout(() => {
     memoryHtml.innerHTML= '';
   }, 3000)
 })
+
+
+// creare un funzione che permetta all'utente di generare numeri da inserire in un array da confrontare in futuro
+
+let input = document.getElementById('array-user');
+
+const btnSend = document.getElementById('send');
+btnSend.innerHTML= 'send'
+
+const btnVerify = document.getElementById('verifica');
+btnVerify.innerHTML= 'verifica'
+
+const arrayUser = [];
+
+function addNum (){
+     
+    if(arrayUser.length < numNum ){
+        
+        let inputValue = parseInt(input.value);
+        arrayUser.push(inputValue);
+        console.log(arrayUser);
+        input.value = '';
+        }else{
+        btnSend.classList.add('d-none');
+        btnVerify.classList.remove('d-none');
+    }
+    
+}
+
+btnSend.addEventListener('click', addNum)
+
+
+
+// creare una funzione che verifichi il risultato dell'input dell'user
 
 
 
