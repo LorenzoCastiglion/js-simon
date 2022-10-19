@@ -53,17 +53,18 @@ const arrayUser = [];
 
 function addNum (){
      
-    if(arrayUser.length < numNum ){
-        
-        let inputValue = parseInt(input.value);
-        arrayUser.push(inputValue);
-        console.log(arrayUser);
-        input.value = '';
-        }else{
+    
+    let inputValue = parseInt(input.value);
+    arrayUser.push(inputValue);
+    console.log(arrayUser);
+    input.value = '';
+
+    if(arrayUser.length >= numNum ){
         btnSend.classList.add('d-none');
         btnVerify.classList.remove('d-none');
+
     }
-    
+
 }
 
 btnSend.addEventListener('click', addNum)
@@ -72,10 +73,26 @@ btnSend.addEventListener('click', addNum)
 
 // creare una funzione che verifichi il risultato dell'input dell'user
 
+function verify (){
+    
+    let vittoria;
 
+    for(let i = 0; i < numNum; i++){
 
+    if(arrayUser[i]!== num[i]){
+        //segna che hai perso
+        vittoria = false;
+        
+    }else{
+        //segna che hai vinto
+        vittoria = true;
+    }
 
+    console.log(vittoria);
+}
+}
 
+btnVerify.addEventListener('click', verify)
 
 
 
