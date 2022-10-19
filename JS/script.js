@@ -88,9 +88,11 @@ function verify (){
     }
 
     if(perdita){
-        setTimeout(() => {
-            location.href = "https://www.youtube.com/watch?v=ttp6AMlSJEw";
-          }, 3000)
+        // setTimeout(() => {
+        //     location.href = "https://www.youtube.com/watch?v=ttp6AMlSJEw";
+        //   }, 3000)
+
+          loose.innerHTML = 'hai perso, mi spiace!';
         
     }else{
         console.log('hai vinto')
