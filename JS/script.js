@@ -53,10 +53,10 @@ function genNum () {
 let input = document.getElementById('array-user');
 
 const btnSend = document.getElementById('send');
-btnSend.innerHTML= 'send'
+btnSend.innerHTML= 'INVIA'
 
 const btnVerify = document.getElementById('verifica');
-btnVerify.innerHTML= 'verifica'
+btnVerify.innerHTML= 'VERIFICA'
 
 const arrayUser = [];
 
