@@ -15,6 +15,22 @@ let num = [];
 
 let numNum = 5;
 
+// generatore dei cinque numeri
+while (num.length < numNum){
+    let generate = randomNumber(1,100);
+
+// controllo numeri generati per non pushare doppioni nell'array
+    if(!num.includes(generate)){
+        num.push(generate)
+    }
+}
+
+
+// stampo i nnumeri casuali nel DOM
+memoryHtml.innerHTML = num;
+
+
+
 
 
 
