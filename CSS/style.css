@@ -1,50 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Raleway&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-};
-
-
-
-
-body{
-    
-    font-family: 'Raleway', sans-serif;
-    position: relative;
-    
 }
 
 
 
 
-.scheda{
+body {
+    background: #c84646;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+
+}
+
+
+
+
+.scheda {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50px;
     background: #c84646;
-    box-shadow:  20px 20px 60px #aa3c3c, -20px -20px 60px #e65151;
-                
-                                               
+    box-shadow: 20px 20px 60px #aa3c3c, -20px -20px 60px #e65151;
+
+
 }
 
-button{
-color: white;
-border: 0;
-border-radius: 50px;
-background: #c84646;
-box-shadow: inset 1px 1px 2px #702727, inset -1px -1px 2px #ff6565;
-            
+button {
+    color: white;
+    border: 0;
+    border-radius: 50px;
+    background: #c84646;
+    box-shadow: inset 1px 1px 2px #702727, inset -1px -1px 2px #ff6565;
+
 }
 
-button:hover{
+button:hover {
     text-shadow: 0px 0px 11px rgba(255, 255, 255, 1);
 }
 
-h1, h4{
-    font-family: 'Alfa Slab One', cursive; 
+h1,
+h4 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#memory {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 100px;
+}
+
+#sconfitta {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 60px;
 }

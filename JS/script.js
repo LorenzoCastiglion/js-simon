@@ -101,10 +101,10 @@ function verify (){
             location.href = "https://www.youtube.com/watch?v=ttp6AMlSJEw";
           }, 3000)
 
-          loose.innerHTML = 'hai perso, mi spiace!';
+          loose.innerHTML = 'Bad News!';
         
     }else{
-        console.log('hai vinto')
+        loose.innerHTML = 'hai perso, mi spiace!';
     }
 
     
