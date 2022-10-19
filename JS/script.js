@@ -72,24 +72,31 @@ btnSend.addEventListener('click', addNum)
 
 
 // creare una funzione che verifichi il risultato dell'input dell'user
+let loose = document.getElementById('sconfitta');
+
 
 function verify (){
-    
-    let vittoria;
+    btnVerify.removeEventListener('click', verify);
+    let perdita = false;
 
     for(let i = 0; i < numNum; i++){
 
-    if(arrayUser[i]!== num[i]){
-        //segna che hai perso
-        vittoria = false;
-        
-    }else{
-        //segna che hai vinto
-        vittoria = true;
+        if(arrayUser[i] !== num[i]){
+            perdita = true;
+            // return;
+        }
     }
 
-    console.log(vittoria);
-}
+    if(perdita){
+        setTimeout(() => {
+            location.href = "https://www.youtube.com/watch?v=ttp6AMlSJEw";
+          }, 3000)
+        
+    }else{
+        console.log('hai vinto')
+    }
+
+    
 }
 
 btnVerify.addEventListener('click', verify)
