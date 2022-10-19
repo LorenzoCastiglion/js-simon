@@ -34,4 +34,20 @@ function palindrome(str) {
 // }
 // console.log(parolaGirata);
 
+function myLoop(array,i,time) {
+    setTimeout(function() {
+        memoryHtml.innerHTML = `${array[i]}`;
+        i++;
+        if (i < array.length) {
+            myLoop(array,i,time);
+        }
+        if (i == array.length){
+            setTimeout(cancelmemoryHtml,time);
+        }
+    }, time)
+}
+function cancelmemoryHtml(){
+    memoryHtml.innerHTML = '';
+}
+
 

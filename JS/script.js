@@ -20,6 +20,9 @@ btnGen.addEventListener('click',
 
 // generatore dei cinque numeri
 function genNum () {
+
+    num = [];
+
     while (num.length < numNum){
         let generate = randomNumber(1,100);
     
@@ -29,14 +32,20 @@ function genNum () {
         }
     }
     
-    // printo l'array numrndm nel DOM
-    memoryHtml.innerHTML = num;
-    console.log(num);
-    // setto una arrow funct che mi cancella il print array num nel DOM
-setTimeout(() => {
-    memoryHtml.innerHTML= '';
-  }, 3000)
-})
+    let interval = 1000
+
+    num.forEach(function (el, index) {
+        setTimeout(function () {
+            memoryHtml.innerHTML = el; 
+        }, index * interval);
+        
+      });
+
+      setTimeout(function () {
+        memoryHtml.innerHTML = ''; 
+    }, num.length * interval);
+}
+)
 
 
 // creare un funzione che permetta all'utente di generare numeri da inserire in un array da confrontare in futuro
@@ -88,9 +97,9 @@ function verify (){
     }
 
     if(perdita){
-        // setTimeout(() => {
-        //     location.href = "https://www.youtube.com/watch?v=ttp6AMlSJEw";
-        //   }, 3000)
+        setTimeout(() => {
+            location.href = "https://www.youtube.com/watch?v=ttp6AMlSJEw";
+          }, 3000)
 
           loose.innerHTML = 'hai perso, mi spiace!';
         
@@ -104,7 +113,7 @@ function verify (){
 btnVerify.addEventListener('click', verify)
 
 
-
+//see element of an array one by one ?
 
 
 
