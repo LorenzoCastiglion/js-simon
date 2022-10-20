@@ -60,3 +60,9 @@ h4 {
     font-family: 'Alfa Slab One', cursive;
     font-size: 60px;
 }
+
+#array-user{
+    border: 0;
+    background-color: #c84646;
+    box-shadow: inset 1px 1px 2px #702727, inset -1px -1px 2px #ff6565;
+}

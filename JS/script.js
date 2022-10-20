@@ -44,6 +44,7 @@ function genNum () {
       setTimeout(function () {
         memoryHtml.innerHTML = ''; 
     }, num.length * interval);
+    console.log(num);
 }
 )
 
